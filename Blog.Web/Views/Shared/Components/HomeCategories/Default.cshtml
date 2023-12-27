@@ -1,0 +1,28 @@
+﻿@using Blog.Entity.DTOs.Categories;
+
+@model List<CategoryDto>
+
+
+<div class="content">
+	<ul>
+
+		@foreach(var category in Model)
+		{
+
+		//Burası articleServisteki GetAllByPagingAsync metodunu tetikler oraya categoryId yi yollar ona göre yönlendirme yapılır
+			<li> <a asp-controller="Home" asp-action="Index" class="badge rounded-pill bg-warning w-50 text-uppercase font-weight-bold" asp-route-categoryId="@category.Id"> • @category.Name </a> </li>
+		}
+
+
+
+
+
+
+	</ul>
+
+
+
+
+
+
+</div>
